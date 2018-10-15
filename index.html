@@ -19,6 +19,7 @@ limitations under the License.
     <style type="text/css">
       body {
         overflow:hidden;
+        background-color: #FFFFFF;
       }
       div{
         height:720PX;
@@ -37,8 +38,7 @@ limitations under the License.
     <title>Cast Hello Text</title>
   </head>
   <body>
-    <iframe src= "http://localhost:8081"/>
-  <div id="message">Talk to me</div>
+    <iframe width="100%" height="100%"/>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
@@ -95,7 +95,7 @@ limitations under the License.
       // utility function to display the text message in the input field
       function displayText(text) {
         console.log(text);
-        document.getElementById('message').innerText = text;
+        document.getElementById('message').src = text;
         window.castReceiverManager.setApplicationState(text);
       };
     </script>
