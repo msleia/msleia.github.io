@@ -187,8 +187,8 @@ limitations under the License.
       /**
        * utility function to handle text typed in by user in the input field
        */
-      function update() {
-        sendMessage(document.getElementById('input').value);
+      function update(msg) {
+        sendMessage(msg);
       }
 
       /**
@@ -202,7 +202,12 @@ limitations under the License.
   </head>
   <body>
     <div class="container">
-        <img src="static/img/teach.jpeg"  class="img-rounded" onclick="update('start')"/>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <img src="static/img/cast_button.jpeg"  class="img-rounded" onclick="update('start')"/>
+            </div>
+        </div>
+        
     </div>
     <!-- <table id="wrapper">
       <tr>
