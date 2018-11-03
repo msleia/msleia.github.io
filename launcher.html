@@ -24,6 +24,7 @@
     var applicationID = '186273EC';
     var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
     var session = null;
+    var user = null;
 
     /**
      * Call initialization for Cast
@@ -155,7 +156,7 @@
      * utility function to handle text typed in by user in the input field
      */
     function update(msg) {
-      sendMessage(msg);
+      sendMessage(user);
     }
 
     /**
@@ -172,6 +173,7 @@
       console.log('Name: ' + profile.getName());
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      user = profile.getEmail();
     }
   </script>
 
